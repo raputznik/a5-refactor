@@ -1,0 +1,27 @@
+			#container {
+				width:500px;
+			}
+			.box {
+				width:150px;
+				height:90px;
+				margin:0 10px 10px 0;
+				background-color: pink;
+				float:left;
+				text-align: center;
+				color:white;
+				padding-top:60px;
+				list-style-type: none;
+				transition:transform .5s, background-color .5s;
+				-webkit-transition:-webkit-transform .5s, background-color .5s;
+			}
+			.box:hover {
+				background-color: purple;
+				transform:rotate(360deg);
+				-webkit-transform:rotate(360deg);
+			}
+			.banana {
+				border:10px solid yellow;
+				width:130px;
+				height:70px;
+				padding-top:60px;
+			}

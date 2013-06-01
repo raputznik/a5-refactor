@@ -12,7 +12,29 @@
 				var price = $('<p class="details price">Price $'+amount+'</p>');
 				vacation.find(".vote").after(price);
 				$(this).remove();
+
+				var tickets = vacation.find(".tickets");
+				tickets.slideDown();
+				tickets.find(".total").text(amount);
+				tickets.find(".quantity").keyup(function(){
+					// Get the price of the vacation 
+					//var amount
+
+
+					//Get the quantity entered
+					var qty = $(this).val();
+
+
+					//Set the price to price x quantity
+					tickets.find(".total").text(amount * qty);
+				});
 			});
+			$(".expand").click(function(event){
+				event.preventDefault();
+				$(".more").fadeToggle();
+			});
+
+
 		});
 		</script>
 		<style>
@@ -103,9 +125,13 @@
 			}
 			.tickets {
 				color:white;
+				display: none;
 			}
 			.quantity {
 				width: 30px;
+			}
+			.more {
+				display: none;
 			}
 		</style>
 	</head>
