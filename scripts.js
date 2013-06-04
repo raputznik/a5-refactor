@@ -1,12 +1,8 @@
 $(document).ready(function(){
 	$("#container > div").hover(
 		function(){
-			$(this).addClass("banana");
-		},
-		function(){
-			$(this).removeClass("banana");	
+			$(this).toggleClass("banana");
 		});
-	
 	$("#container > div").click(function(){
 		alert($(this).text());
 	});
